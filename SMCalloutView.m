@@ -32,7 +32,6 @@ NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
 
 @interface SMCalloutView ()
 @property (nonatomic, strong) UIButton *containerView; // for masking and interaction
-@property (nonatomic, strong) UILabel *titleLabel, *subtitleLabel;
 @property (nonatomic, assign) SMCalloutArrowDirection currentArrowDirection;
 @property (nonatomic, assign) BOOL popupCancelled;
 @end
