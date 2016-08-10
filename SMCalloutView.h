@@ -47,8 +47,8 @@ extern NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView;
 @property (nonatomic, copy, nullable) NSString *title;
 @property (nonatomic, copy, nullable) NSString *subtitle;
 
-@property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UILabel *subtitleLabel;
+@property (nonatomic, copy, nullable) NSAttributedString *attributedTitle;
+@property (nonatomic, copy, nullable) NSString *attributedSubtitle;
 
 /// Left accessory view for the call out
 @property (nonatomic, strong, nullable) UIView *leftAccessoryView;

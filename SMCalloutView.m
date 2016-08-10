@@ -32,6 +32,7 @@ NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
 
 @interface SMCalloutView ()
 @property (nonatomic, strong) UIButton *containerView; // for masking and interaction
+@property (nonatomic, strong) UILabel *titleLabel, *subtitleLabel;
 @property (nonatomic, assign) SMCalloutArrowDirection currentArrowDirection;
 @property (nonatomic, assign) BOOL popupCancelled;
 @end
@@ -286,6 +287,8 @@ NSTimeInterval const kSMCalloutViewRepositionDelayForUIScrollView = 1.0/3.0;
     // apply title/subtitle (if present
     self.titleLabel.text = self.title;
     self.subtitleLabel.text = self.subtitle;
+    self.titleLabel.attributedText = self.attributedTitle;
+    self.subtitleLabel.attributedText = self.attributedSubtitle;
     
     // size the callout to fit the width constraint as best as possible
     self.frameSize = [self sizeThatFits:CGSizeMake(constrainedRect.size.width, self.calloutHeight)];
